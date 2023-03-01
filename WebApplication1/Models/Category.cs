@@ -1,0 +1,26 @@
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+namespace WebApplication1.Models
+{
+    public class Category
+    {
+        //adding properties of category table
+
+        //adding data annotations to represent properties as primary key or required field or foreign key etc
+
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public string Name { get; set; }
+
+        [DisplayName("Display Order")]
+        [Range(1, 100,ErrorMessage ="The display order must be between 1 and 100")]
+        public int DisplayOrder { get; set; }
+
+        public DateTime CreatedDate { get; set; }=DateTime.Now;
+
+
+
+    }
+}
